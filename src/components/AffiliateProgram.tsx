@@ -1,6 +1,7 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { motion, useInView } from 'motion/react';
 import { Handshake, Building, Scale, Calculator, Users, TrendingUp, Briefcase, Sparkles, RefreshCw, ArrowRight, CheckCircle2, AlertCircle, Loader2 } from 'lucide-react';
+import { Seo } from './Seo';
 
 const PartnerCard = ({ partner, isMobile, index }: { partner: any, isMobile: boolean, index: number, key?: any }) => {
 // ... (rest of the component - skipping to handleSubmit implementation, need to see the file to know what to keep/replace)
@@ -15,7 +16,7 @@ const PartnerCard = ({ partner, isMobile, index }: { partner: any, isMobile: boo
   return (
     <motion.div 
       ref={ref}
-      whileHover={!isMobile ? { y: -10 } : undefined}
+      whileHover={!isMobile ? { y: -10, backgroundColor: "#154372", borderColor: "transparent" } : undefined}
       animate={{
         y: active ? -10 : 0,
         backgroundColor: active ? "#154372" : "#ffffff",
@@ -61,7 +62,7 @@ const TakeawayCard = ({ takeaway, isMobile, index }: { takeaway: any, isMobile: 
   return (
     <motion.div 
       ref={ref}
-      whileHover={!isMobile ? { y: -10 } : undefined}
+      whileHover={!isMobile ? { y: -10, backgroundColor: "#ffffff", borderColor: "rgb(243, 244, 246)" } : undefined}
       animate={{
         y: active ? -10 : 0,
         backgroundColor: active ? "#ffffff" : "#154372",
@@ -99,9 +100,10 @@ const TakeawayCard = ({ takeaway, isMobile, index }: { takeaway: any, isMobile: 
 
 export const AffiliateProgram = () => {
     const [isMobile, setIsMobile] = useState(false);
-    const [formData, setFormData] = useState({                
+    const [formData, setFormData] = useState({
         firstName: '',
         lastName: '',
+        companyName: '',
         email: '',
         phone: '',
         message: ''
@@ -127,34 +129,29 @@ export const AffiliateProgram = () => {
 
     const handleSubmit = async (e: React.FormEvent) => {
         e.preventDefault();
-        if (!formData.firstName || !formData.lastName || !formData.email) {
-            setErrorMessage('Please fill in your name and email address.');
+        if (!formData.firstName || !formData.email || !formData.phone) {
+            setErrorMessage('Please fill in your first name, email address, and phone number.');
             setStatus('error');
             return;
         }
-        
+
         setStatus('submitting');
         try {
-            const response = await fetch('/api/contact', {
+            const response = await fetch('/api/join', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
                 },
-                body: JSON.stringify({
-                    name: `${formData.firstName} ${formData.lastName}`,
-                    email: formData.email,
-                    phone: formData.phone,
-                    message: formData.message,
-                    inquiryType: 'Affiliate Program Inquiry'
-                }),
+                body: JSON.stringify(formData),
             });
-            
+
             const data = await response.json();
             if (response.ok) {
                 setStatus('success');
                 setFormData({
                     firstName: '',
                     lastName: '',
+                    companyName: '',
                     email: '',
                     phone: '',
                     message: ''
@@ -192,6 +189,10 @@ export const AffiliateProgram = () => {
       animate={{ opacity: 1 }}
       transition={{ duration: 0.6 }}
     >
+      <Seo 
+        title="Join Naviter - Naviter Wealth" 
+        description="Partner with Naviter Wealth—learn about joining our team and our affiliate program." 
+      />
       {/* Text Section mimicking the screenshot */}
       <div className="max-w-5xl mx-auto px-10 text-center mb-20">
         <h1 className="font-serif text-3xl md:text-5xl text-naviter-navy mb-6">
@@ -295,9 +296,9 @@ export const AffiliateProgram = () => {
             <div className="w-16 h-16 bg-emerald-50 rounded-full flex items-center justify-center mx-auto text-emerald-600">
                 <CheckCircle2 className="w-10 h-10" />
             </div>
-            <h3 className="text-2xl font-serif text-naviter-navy lowercase">request submitted</h3>
-            <p className="text-slate-600 max-w-md mx-auto font-sans text-sm leading-relaxed">
-                Thank you for your interest in the Naviter affiliate program. Your request has been routed to our team at <span className="text-naviter-blue font-semibold">team@naviterwealth.com</span>. We will review your context and reach out shortly.
+            <h3 className="text-2xl font-serif text-naviter-navy lowercase">thank you</h3>
+            <p className="text-slate-600 max-w-md mx-auto font-sans text-base leading-relaxed">
+                Thanks for contacting us! We will get in touch with you shortly.
             </p>
             <div className="pt-6">
                 <button 
@@ -344,14 +345,26 @@ export const AffiliateProgram = () => {
                     />
                 </div>
                 <div className="space-y-2">
+                    <label className="block text-[10px] uppercase tracking-widest text-naviter-blue font-sans font-bold">company name</label>
+                    <input
+                        name="companyName"
+                        type="text"
+                        value={formData.companyName}
+                        onChange={handleInputChange}
+                        className="w-full p-3 border-b border-naviter-navy/20 bg-transparent focus:border-naviter-navy outline-none text-naviter-navy font-sans transition-colors"
+                        placeholder="Your firm / company"
+                        disabled={status === 'submitting'}
+                    />
+                </div>
+                <div className="space-y-2">
                     <label className="block text-[10px] uppercase tracking-widest text-naviter-blue font-sans font-bold">email address *</label>
-                    <input 
+                    <input
                         name="email"
-                        type="email" 
+                        type="email"
                         value={formData.email}
                         onChange={handleInputChange}
-                        className="w-full p-3 border-b border-naviter-navy/20 bg-transparent focus:border-naviter-navy outline-none text-naviter-navy font-sans transition-colors" 
-                        placeholder="jane.doe@firm.com" 
+                        className="w-full p-3 border-b border-naviter-navy/20 bg-transparent focus:border-naviter-navy outline-none text-naviter-navy font-sans transition-colors"
+                        placeholder="jane.doe@firm.com"
                         required
                         disabled={status === 'submitting'}
                     />

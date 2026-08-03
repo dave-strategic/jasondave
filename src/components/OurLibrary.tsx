@@ -1,6 +1,54 @@
 import { motion } from 'motion/react';
 import { RefreshCw, Search, ChevronDown, Calendar, Clock, ArrowRight, X } from 'lucide-react';
 import { useState, useEffect, useRef, useMemo } from 'react';
+import { useNavigate } from 'react-router-dom';
+import { Seo } from './Seo';
+import libraryData from '../data/naviter-library.json';
+
+// Map the live "Our Library" category to the app's publication type
+const CATEGORY_TO_TYPE: Record<string, string> = {
+  'Insights': 'INSIGHT',
+  'Market Commentary': 'MARKET COMMENTARY',
+  'Newsletters': 'NEWSLETTER',
+};
+
+// Normalize live topic-tag labels to the app's complexity vocabulary
+const TAG_NORMALIZE: Record<string, string> = {
+  'Tax Mitigation': 'Mitigating Taxes',
+};
+const normTag = (t: string) => TAG_NORMALIZE[t] || t;
+
+const fmtDate = (d: string) => {
+  const dt = new Date((d || '').replace(' ', 'T'));
+  if (isNaN(dt.getTime())) return d;
+  const mm = String(dt.getMonth() + 1).padStart(2, '0');
+  const dd = String(dt.getDate()).padStart(2, '0');
+  return `${mm}/${dd}/${dt.getFullYear()}`;
+};
+
+const readTimeFor = (html: string) => {
+  const words = (html || '').replace(/<[^>]+>/g, ' ').split(/\s+/).filter(Boolean).length;
+  return `${Math.max(2, Math.round(words / 200))} min read`;
+};
+
+// Full migrated library dataset (171 posts) baked into the app
+const LIBRARY_ARTICLES = (libraryData as any[])
+  // Newsletter category is intentionally excluded from the Library
+  .filter((p) => ((p.category && p.category[0]) || 'Insights') !== 'Newsletters')
+  .map((p) => {
+  const cat = (p.category && p.category[0]) || 'Insights';
+  return {
+    id: p.slug || p.id,
+    slug: p.slug,
+    title: p.title,
+    type: CATEGORY_TO_TYPE[cat] || 'INSIGHT',
+    date: fmtDate(p.date),
+    readTime: readTimeFor(p.contentHtml),
+    image: p.featuredImage || '/Library Image.jpg',
+    tags: p.tags || [],
+    complexityTags: (p.tags || []).map(normTag),
+  };
+});
 
 // The 8 complexities listed in the complexity cards in OurServices
 const COMPLEXITY_TAGS = [
@@ -117,6 +165,7 @@ export const OurLibrary = ({ onNavigateToFirm, onNavigateToServices, onNavigateT
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   const [expanded, setExpanded] = useState(false);
   const dropdownRef = useRef<HTMLDivElement>(null);
+  const navigate = useNavigate();
 
   // Initialize filter when visiting with an initial complexity tag
   useEffect(() => {
@@ -184,57 +233,12 @@ export const OurLibrary = ({ onNavigateToFirm, onNavigateToServices, onNavigateT
     return () => document.removeEventListener('mousedown', handleClickOutside);
   }, []);
 
-  const syncArticles = async () => {
+  const syncArticles = () => {
+    // Library content is migrated and baked into the app (independent of WordPress).
     setLoading(true);
-    try {
-      let fetched: any[] = [];
-      try {
-        const response = await fetch('/api/sync-articles');
-        if (response.ok) {
-          fetched = await response.json();
-        }
-      } catch (err) {
-        console.warn('WordPress feed fetch failed or was blocked, utilizing high-fidelity fallbacks', err);
-      }
-
-      const types = ['INSIGHT', 'MARKET COMMENTARY', 'NEWSLETTER'];
-      
-      // Map API response to distribute them deterministically among the three publication types and assign complexities
-      const mappedFetched = fetched.map((article: any, index: number) => {
-        const type = types[index % types.length];
-        let complexityTags: string[] = [];
-        
-        if (type === 'INSIGHT') {
-          // Assign 1 or 2 complexities deterministically based on index so the counts are accurate
-          const first = COMPLEXITY_TAGS[index % COMPLEXITY_TAGS.length];
-          const second = COMPLEXITY_TAGS[(index + 3) % COMPLEXITY_TAGS.length];
-          complexityTags = index % 2 === 0 ? [first] : [first, second];
-        }
-        
-        return {
-          ...article,
-          type,
-          complexityTags,
-          readTime: article.readTime || `${4 + (index % 5)} min read`
-        };
-      });
-
-      // Merge fetched with our local, beautiful mock portfolio list so they are fully populated
-      const combined = [...mappedFetched];
-      FALLBACK_ARTICLES.forEach((fallback) => {
-        if (!combined.some(item => item.title.toLowerCase() === fallback.title.toLowerCase())) {
-          combined.push(fallback);
-        }
-      });
-
-      setArticles(combined);
-    } catch (error) {
-      console.error('Failed to sync:', error);
-      // Fallback directly on general failure
-      setArticles(FALLBACK_ARTICLES);
-    } finally {
-      setLoading(false);
-    }
+    const data = LIBRARY_ARTICLES.length ? LIBRARY_ARTICLES : FALLBACK_ARTICLES;
+    setArticles(data);
+    setTimeout(() => setLoading(false), 200);
   };
 
   useEffect(() => {
@@ -307,6 +311,10 @@ export const OurLibrary = ({ onNavigateToFirm, onNavigateToServices, onNavigateT
 
   return (
     <div className="flex flex-col w-full bg-[#f4f4f8]" id="library-page-root">
+      <Seo 
+        title="Our Library - Naviter Wealth" 
+        description="Insights, articles and resources from Naviter Wealth to help you navigate wealth management and legacy planning." 
+      />
       {/* Hero Banner */}
       <section className="relative min-h-screen w-full overflow-hidden flex items-center justify-center bg-naviter-navy">
         <div className="absolute inset-0 z-0">
@@ -352,13 +360,13 @@ export const OurLibrary = ({ onNavigateToFirm, onNavigateToServices, onNavigateT
       </section>
 
       {/* Sync Banner */}
-      <div className="bg-white/90 p-4 border-b flex justify-between items-center text-sm px-6 md:px-10 cursor-pointer" onClick={syncArticles}>
+      {/* <div className="bg-white/90 p-4 border-b flex justify-between items-center text-sm px-6 md:px-10 cursor-pointer" onClick={syncArticles}>
         <div className="flex items-center gap-2 text-naviter-navy font-semibold uppercase tracking-wider">
-          <RefreshCw className={`size-4 ${loading ? 'animate-spin' : ''}`} /> {loading ? 'SYNCING...' : 'SYNC PUBLICATIONS'}
+          <RefreshCw className={`size-4 ${loading ? 'animate-spin' : ''}`} /> {loading ? 'LOADING...' : 'REFRESH LIBRARY'}
         </div>
-        <div className="hidden md:block text-gray-500 italic">Syndicated on demand from Naviter Wealth live servers.</div>
-        <div className="bg-green-100 text-green-700 px-3 py-1 rounded-full font-bold text-xs md:text-sm">{articles.length} LIVE ARTICLES LOADED</div>
-      </div>
+        <div className="hidden md:block text-gray-500 italic">Naviter Wealth publications library.</div>
+        <div className="bg-green-100 text-green-700 px-3 py-1 rounded-full font-bold text-xs md:text-sm">{articles.length} PUBLICATIONS</div>
+      </div> */}
       
       <div className="px-6 md:px-10 py-12 max-w-7xl mx-auto space-y-8 w-full">
         {/* Row 1: The 4 Buttons with count tags and Checkbox indicators */}
@@ -369,7 +377,6 @@ export const OurLibrary = ({ onNavigateToFirm, onNavigateToServices, onNavigateT
               { id: 'all', label: 'All Publications', count: countAll },
               { id: 'INSIGHT', label: 'Insights', count: countInsights },
               { id: 'MARKET COMMENTARY', label: 'Market Commentaries', count: countCommentaries },
-              { id: 'NEWSLETTER', label: 'Newsletters', count: countNewsletters },
             ].map((cat) => {
               const isChecked = isCategoryChecked(cat.id);
               return (
@@ -608,9 +615,10 @@ export const OurLibrary = ({ onNavigateToFirm, onNavigateToServices, onNavigateT
                 : 'Newsletter';
 
               return (
-                <div 
-                  key={article.id} 
-                  className="bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 border border-gray-100 flex flex-col justify-between"
+                <div
+                  key={article.id}
+                  onClick={() => article.slug && navigate(`/our-library/${article.slug}`)}
+                  className="bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 border border-gray-100 flex flex-col justify-between cursor-pointer"
                   id={`article-card-${article.id}`}
                 >
                   <div>

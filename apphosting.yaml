@@ -1,0 +1,33 @@
+# Firebase App Hosting configuration
+# https://firebase.google.com/docs/app-hosting/configure
+
+runConfig:
+  minInstances: 0
+  maxInstances: 1
+
+env:
+  # Serve the built /dist output (production mode) instead of the Vite dev server.
+  - variable: NODE_ENV
+    value: production
+    availability:
+      - BUILD
+      - RUNTIME
+  - variable: RESEND_API_KEY
+    secret: RESEND_API_KEY
+  # Mailchimp lead capture for the Join Naviter (affiliate) form
+  - variable: MAILCHIMP_API_KEY
+    secret: MAILCHIMP_API_KEY
+  # Mailchimp lead capture (Join Naviter form) — live.
+  - variable: MAILCHIMP_AUDIENCE_ID
+    value: "4cbabca3bc"
+    availability:
+      - RUNTIME
+
+  # --- Optional: contact form email delivery (Resend) ---
+  # Fill these in later (or set as secrets in the console) to enable real emails.
+  # - variable: RESEND_API_KEY
+  #   secret: RESEND_API_KEY
+  # - variable: RESEND_FROM_EMAIL
+  #   value: "onboarding@resend.dev"
+  # - variable: CONTACT_DESTINATION_EMAILS
+  #   value: "team@naviterwealth.com, bblackmon@naviterwealth.com"

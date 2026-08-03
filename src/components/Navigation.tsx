@@ -70,23 +70,19 @@ export const Navigation = memo(({ activePage, onNavigate }: NavigationProps) => 
           }}
           transition={{ duration: 0.4, ease: [0.16, 1, 0.3, 1] }}
           onClick={() => setIsOpen(true)}
-          className="w-9.5 h-9.5 bg-transparent flex flex-col items-center justify-center gap-1.5 transition-all duration-300 group rounded-none border-none outline-none cursor-pointer relative pointer-events-auto"
+          className="w-14 h-14 bg-transparent flex flex-col items-center justify-center gap-1.5 transition-all duration-300 group rounded-none border-none outline-none cursor-pointer relative pointer-events-auto"
           aria-label="Open Menu"
         >
-          {/* Custom Naviter Box SVG Border with Left Gap in Navy Blue/White */}
-          <svg 
-            className={`absolute inset-0 w-full h-full pointer-events-none transform transition-all duration-300 group-hover:scale-105 ${(activePage === 'policystatement' || activePage === 'ddq') ? 'text-white' : 'text-naviter-navy'}`} 
-            viewBox="0 0 44 44" 
-            fill="none" 
+          {/* Menu icon: three left-aligned navy lines of decreasing length */}
+          <svg
+            className={`absolute inset-0 w-full h-full pointer-events-none transform transition-all duration-300 group-hover:scale-105 ${(activePage === 'policystatement' || activePage === 'ddq') ? 'text-white' : 'text-naviter-navy'}`}
+            viewBox="0 0 44 44"
+            fill="none"
             xmlns="http://www.w3.org/2000/svg"
           >
-            <path
-              d="M1.5 10 V1.5 H42.5 V42.5 H1.5 V34"
-              stroke="currentColor"
-              strokeWidth="3.2"
-              strokeLinecap="square"
-              strokeLinejoin="miter"
-            />
+            <line x1="8" y1="15" x2="36" y2="15" stroke="currentColor" strokeWidth="3" strokeLinecap="square" />
+            <line x1="8" y1="22" x2="36" y2="22" stroke="currentColor" strokeWidth="3" strokeLinecap="square" />
+            <line x1="8" y1="29" x2="36" y2="29" stroke="currentColor" strokeWidth="3" strokeLinecap="square" />
           </svg>
         </motion.button>
 
@@ -98,12 +94,19 @@ export const Navigation = memo(({ activePage, onNavigate }: NavigationProps) => 
           transition={{ duration: 0.4, ease: [0.16, 1, 0.3, 1] }}
           className="pointer-events-none"
         >
-          <img 
-            src={(activePage === 'policystatement' || activePage === 'ddq') ? "/Naviter logo-white-1.svg" : "/Naviter logo-blue-1.svg"} 
-            alt="Naviter Wealth Logo"
-            className="h-[44px] w-auto object-contain brightness-110"
-            referrerPolicy="no-referrer"
-          />
+          <button
+            type="button"
+            onClick={() => onNavigate('firm')}
+            aria-label="Go to homepage"
+            className="pointer-events-auto cursor-pointer bg-transparent border-none p-0 block"
+          >
+            <img
+              src={(activePage === 'policystatement' || activePage === 'ddq') ? "/Naviter logo-white-1.svg" : "/Naviter logo-blue-1.svg"}
+              alt="Naviter Wealth Logo"
+              className="h-[44px] w-auto object-contain brightness-110"
+              referrerPolicy="no-referrer"
+            />
+          </button>
         </motion.div>
       </motion.div>
 
@@ -179,7 +182,7 @@ export const Navigation = memo(({ activePage, onNavigate }: NavigationProps) => 
                         activePage === item.id ? 'text-naviter-gold' : 'text-white hover:text-naviter-gold'
                       }`}
                     >
-                      <span className="group-hover:translate-x-2 transition-transform duration-300">{item.label}</span>
+                      <span className="capitalize group-hover:translate-x-2 transition-transform duration-300">{item.label}</span>
                     </motion.button>
                   );
                 })}

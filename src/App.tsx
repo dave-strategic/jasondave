@@ -17,10 +17,33 @@ import { Footer } from './components/Footer';
 import { PolicyStatement } from './components/PolicyStatement';
 import { DDQPage } from './components/DDQPage';
 import { OverviewPage } from './components/OverviewPage';
+import { PostDetail } from './components/PostDetail';
+
+const PAGE_ID_TO_PATH: Record<string, string> = {
+  'firm': '/',
+  'services': '/our-services',
+  'team': '/our-team',
+  'library': '/our-library',
+  'affiliate': '/joinnaviter',
+  'contact': '/contact',
+  'policystatement': '/policystatement',
+  'ddq': '/ddq'
+};
+
+const PATH_TO_PAGE_ID: Record<string, string> = {
+  '/': 'firm',
+  '/our-services': 'services',
+  '/our-team': 'team',
+  '/our-library': 'library',
+  '/joinnaviter': 'affiliate',
+  '/contact': 'contact',
+  '/policystatement': 'policystatement',
+  '/ddq': 'ddq'
+};
 
 const KeyedRoutes = Routes as React.ComponentType<any>;
 
-const PAGES = ['/', '/services', '/team', '/library', '/affiliate', '/contact'];
+const PAGES = ['/', '/our-services', '/our-team', '/our-library', '/joinnaviter', '/contact'];
 const ALL_PAGES = [...PAGES, '/policystatement', '/ddq'];
 
 const PageWrapper = ({ children, direction }: { children: React.ReactNode, direction: number }) => (
@@ -44,7 +67,9 @@ export default function App() {
 
   useEffect(() => {
     let currentPath = location.pathname;
-    if (currentPath === '') currentPath = '/';
+    if (currentPath !== '/' && currentPath.endsWith('/')) {
+      currentPath = currentPath.slice(0, -1);
+    }
     
     const prevIndex = ALL_PAGES.indexOf(prevPathRef.current);
     const nextIndex = ALL_PAGES.indexOf(currentPath);
@@ -57,12 +82,17 @@ export default function App() {
   }, [location.pathname]);
 
   const handleNavigate = useCallback((pageOrPath: string, initialFilter: string | null = null) => {
-    let targetPath = pageOrPath === 'firm' ? '/' : (pageOrPath.startsWith('/') ? pageOrPath : `/${pageOrPath}`);
-    setInitialComplexityFilter(targetPath === '/library' ? initialFilter : null);
+    let targetPath = PAGE_ID_TO_PATH[pageOrPath] || (pageOrPath.startsWith('/') ? pageOrPath : `/${pageOrPath}`);
+    setInitialComplexityFilter(targetPath === '/our-library' ? initialFilter : null);
     navigate(targetPath);
   }, [navigate]);
 
-  let activePageName = location.pathname === '/' ? 'firm' : location.pathname.substring(1);
+  let normalizedPath = location.pathname;
+  if (normalizedPath !== '/' && normalizedPath.endsWith('/')) {
+    normalizedPath = normalizedPath.slice(0, -1);
+  }
+  let activePageName = PATH_TO_PAGE_ID[normalizedPath]
+    || (normalizedPath.startsWith('/our-library') ? 'library' : 'firm');
 
   const handleTouchStart = (e: React.TouchEvent) => {
     touchStart.current = {
@@ -80,9 +110,7 @@ export default function App() {
     
     // Gesture must be primarily horizontal and exceed 60px distance
     if (Math.abs(diffX) > Math.abs(diffY) && Math.abs(diffX) > 60) {
-      let currentPath = location.pathname;
-      if (currentPath === '') currentPath = '/';
-      const currentIndex = PAGES.indexOf(currentPath);
+      const currentIndex = PAGES.indexOf(normalizedPath);
       
       if (currentIndex !== -1) {
         if (diffX < 0) {
@@ -116,7 +144,7 @@ export default function App() {
                 <OurFirm onNavigateToServices={() => handleNavigate('services')} />
               </PageWrapper>
             } />
-            <Route path="/services" element={
+            <Route path="/our-services" element={
               <PageWrapper direction={direction}>
                 <OurServices 
                   onNavigateToTeam={() => handleNavigate('team')} 
@@ -124,12 +152,12 @@ export default function App() {
                 />
               </PageWrapper>
             } />
-            <Route path="/team" element={
+            <Route path="/our-team" element={
               <PageWrapper direction={direction}>
                 <OurTeam onNavigateToLibrary={() => handleNavigate('library')} />
               </PageWrapper>
             } />
-            <Route path="/library" element={
+            <Route path="/our-library" element={
               <PageWrapper direction={direction}>
                 <OurLibrary 
                   onNavigateToFirm={() => handleNavigate('firm')}
@@ -139,7 +167,7 @@ export default function App() {
                 />
               </PageWrapper>
             } />
-            <Route path="/affiliate" element={
+            <Route path="/joinnaviter" element={
               <PageWrapper direction={direction}>
                 <AffiliateProgram />
               </PageWrapper>
@@ -166,6 +194,17 @@ export default function App() {
                 />
               </PageWrapper>
             } />
+            
+            <Route path="/our-library/:slug" element={
+              <PageWrapper direction={direction}>
+                <PostDetail onNavigateToLibrary={() => handleNavigate('library')} />
+              </PageWrapper>
+            } />
+
+            {/* Legacy URL Redirects */}
+            <Route path="/our-firm" element={<Navigate to="/" replace />} />
+            <Route path="/disclaimers" element={<Navigate to="/policystatement" replace />} />
+            
             <Route path="*" element={<Navigate to="/" replace />} />
           </KeyedRoutes>
         </AnimatePresence>

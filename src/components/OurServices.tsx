@@ -8,6 +8,7 @@ import {
   Shuffle, LayoutGrid, Grid3x3, ArrowRight,
   Plus, Minus, Workflow
 } from 'lucide-react';
+import { Seo } from './Seo';
 
 // Style: Complexity Grid Cards
 const ComplexityGridCard = ({ comp, idx, isOpen, onToggle, onExplore }: { comp: any, idx: number, isOpen: boolean, onToggle: () => void, onExplore?: () => void, key?: string }) => {
@@ -160,9 +161,9 @@ const PremiumOfferingsAccordion = ({ offerings }: { offerings: any[] }) => {
                         ))}
                     </div>
                     <div className="pt-12">
-                      <button className="flex items-center gap-3 text-[#58aadb] font-serif text-base italic group/cta cursor-pointer hover:text-white transition-colors duration-300 pointer-events-auto">
+                      {/* <button className="flex items-center gap-3 text-[#58aadb] font-serif text-base italic group/cta cursor-pointer hover:text-white transition-colors duration-300 pointer-events-auto">
                         explore related publications <ArrowRight className="w-4 h-4" />
-                      </button>
+                      </button> */}
                     </div>
                   </div>
                 </div>
@@ -241,7 +242,7 @@ const PremiumOfferingsAccordion = ({ offerings }: { offerings: any[] }) => {
                     </div>
 
                     <div className="pt-4 flex justify-between items-center">
-                      <button className="flex items-center gap-2 text-[#58aadb] font-serif text-sm italic hover:text-white transition-colors duration-300">
+                      <button className="hidden items-center gap-2 text-[#58aadb] font-serif text-sm italic hover:text-white transition-colors duration-300">
                         coordinate offering
                         <ArrowRight className="w-3.5 h-3.5" />
                       </button>
@@ -417,6 +418,10 @@ export const OurServices = ({ onNavigateToTeam, onNavigateToLibraryWithComplexit
 
   return (
     <div className="flex flex-col w-full bg-background min-h-screen">
+      <Seo 
+        title="Our Services - Naviter Wealth" 
+        description="Bespoke wealth management—tailored, insightful and actionable advice that integrates with your family's existing advisors and planning." 
+      />
       {/* Header */}
       <section className="relative h-screen w-full overflow-hidden flex items-center justify-center bg-naviter-navy">
         {/* Grand Canyon Background */}
@@ -523,10 +528,10 @@ export const OurServices = ({ onNavigateToTeam, onNavigateToLibraryWithComplexit
             <h2 className="text-xl md:text-2xl font-serif text-naviter-blue lowercase mb-6">our coordinated execution</h2>
             <div className="w-16 h-[1px] bg-naviter-blue mx-auto mb-12" />
             <div className="space-y-8">
-              <p className="text-2xl md:text-3xl font-serif leading-[1.6] font-light italic text-white/90">
-                Our fiduciary responsibility extends to every solution we provide. We recognize that significant wealth requires an ecosystem of specialists. Whether we are deploying Naviter’s proprietary capabilities or seamlessly integrating alongside the trusted legal, corporate, and tax advisors you already have in place, we act as your central <span className="text-[#58aadb] italic font-bold">Office.</span>
+              <p className="text-2xl md:text-3xl font-serif leading-[1.6] font-light text-white/90">
+                Our fiduciary responsibility extends to every solution we provide. We recognize that significant wealth requires an ecosystem of specialists. Whether we are deploying Naviter’s proprietary capabilities or seamlessly integrating alongside the trusted legal, corporate, and tax advisors you already have in place, we act as your central <span className="text-[#58aadb] font-bold italic">Office.</span>
               </p>
-              <p className="text-2xl md:text-3xl font-serif leading-[1.6] font-light italic text-white/90">
+              <p className="text-2xl md:text-3xl font-serif leading-[1.6] font-light text-white/90">
                 By bridging the gap between fragmented disciplines, we coordinate and execute your strategy with absolute objectivity—ensuring your entire team moves in lockstep toward your family's objectives.
               </p>
             </div>

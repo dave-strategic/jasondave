@@ -1,6 +1,7 @@
 import { useState, useRef, useEffect } from 'react';
 import { motion, AnimatePresence, useInView } from 'motion/react';
 import { X, Mail, Linkedin, ArrowRight, User, Phone } from 'lucide-react';
+import { Seo } from './Seo';
 
 interface TeamMember {
   name: string;
@@ -467,6 +468,10 @@ export const OurTeam = ({ onNavigateToLibrary }: { onNavigateToLibrary: () => vo
 
   return (
     <div className="flex flex-col w-full bg-background min-h-screen">
+      <Seo 
+        title="Our Team - Naviter Wealth" 
+        description="Meet the Naviter Wealth team—experienced professionals dedicated to guiding families through every aspect of their financial journey." 
+      />
       {/* Page Header */}
       <section 
         className="relative min-h-screen flex flex-col justify-center pt-36 pb-20 md:pt-48 md:pb-32 px-6 overflow-hidden border-b border-naviter-navy/5"

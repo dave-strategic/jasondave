@@ -7,6 +7,7 @@ import {
 } from 'lucide-react';
 import { PolicyConstructionContent } from './PolicyConstructionContent';
 import { StackedBarChart } from './StackedBarChart';
+import { Seo } from './Seo';
 
 export const PolicyStatement = ({ 
   onNavigateToContact, 
@@ -213,6 +214,10 @@ export const PolicyStatement = ({
 
   return (
     <div className="bg-[#fcfcfe] min-h-screen text-naviter-navy" id="policy-page-root">
+      <Seo 
+        title="Policy Statement - Naviter Wealth" 
+        description="The Naviter Wealth Policy Statement describes our foundational beliefs, how we construct portfolios, the rationale behind those decisions, and our fee structure." 
+      />
       {/* Decorative top spacer */}
       <div className="h-28 bg-naviter-navy" />
 

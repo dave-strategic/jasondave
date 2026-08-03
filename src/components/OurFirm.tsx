@@ -1,6 +1,7 @@
 import { useState, useRef, useEffect } from 'react';
 import { motion, AnimatePresence, useScroll, useTransform } from 'motion/react';
 import { Shield, Brain, Key, ArrowRight } from 'lucide-react';
+import { Seo } from './Seo';
 
 const FrameworkItem = ({ item, idx }: { item: any, idx: number, key?: any }) => {
   const ref = useRef(null);
@@ -89,12 +90,16 @@ export const OurFirm = ({ onNavigateToServices }: { onNavigateToServices: () => 
 
   return (
     <div className="flex flex-col w-full" id="firm-page-root">
+      <Seo 
+        title="Naviter Wealth" 
+        description="Naviter Wealth is an independent wealth management firm committed to helping you navigate your financial journey— utilizing best-in-class resources to provide bespoke solutions." 
+      />
       {/* Hero Banner */}
       <section className="relative h-screen w-full overflow-hidden flex items-center justify-center bg-naviter-navy">
         {/* Background Video */}
         <div className="absolute inset-0 z-0">
           <video 
-            src="/AdobeStock_289246917_Final.mp4" 
+            src="/banner-video.mov" 
             autoPlay 
             loop 
             muted 
@@ -209,13 +214,13 @@ export const OurFirm = ({ onNavigateToServices }: { onNavigateToServices: () => 
             className="w-full aspect-video rounded-xl overflow-hidden shadow-[0_20px_50px_rgba(21,67,114,0.12)] border border-naviter-navy/5 bg-black relative group text-left"
           >
             <div className="w-full h-full relative">
-              <iframe
-                className="absolute inset-0 w-full h-full"
-                src={`https://www.youtube.com/embed/IRriQ9tPyzk?autoplay=0&playsinline=1&rel=0&modestbranding=1&origin=${typeof window !== 'undefined' ? encodeURIComponent(window.location.origin) : ''}`}
+              <video
+                className="absolute inset-0 w-full h-full object-cover"
+                src="https://naviterwealth.com/wp-content/uploads/2022/06/Naviter_final.mp4"
+                controls
+                playsInline
+                preload="metadata"
                 title="Naviter Wealth Video"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                referrerPolicy="no-referrer-when-downgrade"
-                allowFullScreen
               />
             </div>
           </motion.div>
@@ -277,7 +282,7 @@ export const OurFirm = ({ onNavigateToServices }: { onNavigateToServices: () => 
                 icon: Key,
                 content: (
                   <>
-                    We capitalize on decades of industry relationships to deliver the talented specialists, technology, and strategies—resources often inaccessible to our competitors. Because we believe in <span className="text-naviter-blue font-medium">winning as a team</span>, we use these specialized resources to elevate and coordinate with valued advisors you may already have in place.
+                    We capitalize on decades of industry relationships to deliver the talented specialists, leading technology, and sophisticated strategies—resources often inaccessible to our competitors. Because we believe in <span className="text-naviter-blue font-medium">winning as a team</span>, we use these specialized resources to elevate and coordinate with valued advisors you may already have in place.
                   </>
                 )
               }

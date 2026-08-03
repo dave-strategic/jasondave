@@ -7,6 +7,7 @@ import {
   Users, Briefcase, FileText, Lock, AlertTriangle, 
   Download, Database, Layers, CheckSquare, Square
 } from 'lucide-react';
+import { Seo } from './Seo';
 
 interface TeamMember {
   name: string;
@@ -868,6 +869,10 @@ export const DDQPage = ({
 
   return (
     <div className="bg-[#fcfcfe] min-h-screen text-naviter-navy" id="ddq-page-root">
+      <Seo 
+        title="Due Diligence Questionnaire - Naviter Wealth" 
+        description="Naviter Wealth due diligence questionnaire and firm information." 
+      />
       {/* Decorative top header spacer */}
       <div className="h-28 bg-naviter-navy animate-fade-in" />
 
