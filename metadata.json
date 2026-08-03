@@ -1,0 +1,8 @@
+{
+  "name": "Naviter Website Update (July 16 update)",
+  "description": "A sophisticated modular family office experience for ultra-high-net-worth families.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

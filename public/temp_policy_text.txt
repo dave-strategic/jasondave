@@ -1,0 +1,264 @@
+[H3] Click below to jump to a section.
+[H2] Our Core Investment Tenets
+[H2] Portfolio Construction
+[H2] Ongoing Portfolio Changes
+[H2] Fee Structure
+[H2] Definitions
+[H3] Click below to jump to a section.
+[H2] Our Core Investment Tenants
+[H2] Portfolio Construction
+[H2] Ongoing Portfolio Changes
+[H2] Fee Structure
+[H2] Definitions 
+[H3] Our Core Investment Tenets
+[H3] Own what we recommend to our clients.
+[H3] Apply our best thoughts, strategies, and resources to all relationships.
+[H3] Diversify intelligently.
+[H3] Concentrate portfolios into our highest conviction strategies.
+[H3] Drive investment costs lower.
+[H3] Taxes matter.
+[H3] Our Core Investment Tenets
+[H2] Own what we recommend to our clients.
+[P] In line with our view that the families for whom we work are partners, we want our financial interests to be aligned; we are in it together. This belief is foundational to the remaining tenets.
+[H2] Apply our best thoughts, strategies, and resources to all relationships.
+[H2] Diversify intelligently.
+[P] The “diversity” that comes from owning the traditional style boxes (large-cap growth, large-cap value, mid-cap growth, etc.) is almost nonexistent due to their high correlation to one another. Simply owning more strategies should not be confused with diversifying away risk. One of the best ways to mitigate volatility is to own strategies that are truly lowly correlated to one another—which requires effort.
+[H2] Concentrate portfolios into our highest conviction strategies.
+[H2] Drive investment costs lower.
+[H2] Taxes matter.
+[P] We understand that it is not what you make that counts, but what you keep. While we are careful not to let the “tax tail wag the investment dog,” we aggressively seek to minimize the impact of taxes. We rarely use mutual funds which are typically tax-insensitive. We systematically tax-loss harvest across our portfolios—typically monthly, generating meaningful “tax alpha.”
+[H3] Portfolio Construction
+[H2] Liquid Assets vs. Low-Liquidity Assets
+[H2] When low-liquidity assets are properly selected—with low correlations to liquid assets—their inclusion can have two long-term positive effects on a diversified portfolio:
+[H2] An increase in return
+[H2] A decrease in volatility (risk)
+[H2] Decisions
+[LI] Allocation between liquid and low-liquidity markets.
+[H2] Customizations
+[H2] Liquid Assets
+[H2] We view liquid assets in three categories:
+[P]  Equity Fixed income Liquid alternatives The common characteristic is that each of these has at least daily, if not intraday liquidity, i.e., the ability to be sold quickly for cash. The allocation between each varies based on a client’s risk tolerance, objectives, and other factors. We have created portfolio allocations for three preset risk profiles—conservative, moderate, and aggressive. Note that due to the expected returns and low correlation to equities and fixed income, the liquid alternatives are a static 40% regardless of the risk profile. Equity allocations increase and fixed income allocations decrease as risk tolerance increases. Risk Tilts Decisions Selection from pre-designed, liquid asset allocations for conservative, moderate, and aggressive proles. Customizations Clients are not limited to pre-designed allocations and may design their own blend of liquid markets, i.e., equities, fixed income, and liquid alternatives. Customizations Clients are not limited to pre-designed allocations and may design their own blend of liquid markets, i.e., equities, fixed income, and liquid alternatives. Equities We have three broad views on owning equities: Global equities are one asset class Passive management wins over active management (after trading costs/fees) True value exists in tax-loss harvesting Equities are often segmented into dozens of categories based on market cap, growth vs. value, geographic region, and many other factors. Investors commonly try to “diversify” into these various asset classes to lower risk, but due to the high level of correlation across these asset classes, this approach does little to mitigate volatility. Allocating to numerous asset classes that behave so similarly not only is ineffectual, but it serves to create a false sense of security for investors. Rather than idly attempting to invest across each of these “style boxes,” we view global equities as one asset class. Global equities (U.S., Developed, and Emerging Markets) have largely been commoditized. Large, highly-liquid, and well-known markets are very efficient (What does one manager know about Apple that every other manager doesn’t know?). This makes it highly unlikely that active management will consistently outperform passive management (the index/benchmark). Additionally, the fees of active managers further reduce the likelihood of outperforming the respective benchmark. In fact, according to the SPIVA® U.S. Year-End 2025 Scorecard, large-cap funds underperformed the S&P 500 for the 16th consecutive calendar year. Even more condemning, in the category of All Domestic which includes all market caps and styles, 94% underperformed their respective benchmarks over the last 20 years by an annual average of 2.31%. Given this data, it is improbable that we—or any other firm—bring value by selecting active managers in the broader markets. While active management may work in smaller, less-traded, niche pockets of the market, by utilizing passive management for broad global equities, we aim to significantly reduce fees and the tracking error to the benchmark (the difference between the portfolio performance and the benchmark performance). Rather than implement our passive approach to global equities through ETFs or mutual funds that track an index, we utilize Direct Indexing which provides a greater after-tax benefit. Direct Indexing seeks to replicate index performance by owning the index constituents (or a subset of them) directly—not through a fund structure. This approach allows for tax-loss harvesting across the entire portfolio, even in up markets. We systematically (typically monthly) tax-loss harvest across the entire portfolio. Studies show that historically this has annually generated 75-100 basis points of “tax alpha” or after-tax economic benefit. For more, see our piece on Direct Indexing. In summary, our global equity portfolio is passively managed through Direct Indexing. We view the benefits as: Reduced costs (no manager fees) Increased likelihood of matching index/benchmark returns and thereby outperforming the majority of equity managers Significant after-tax economic benefit via “tax alpha” Customizations Non-taxable accounts will not need to be tax-loss harvested Allocation between U.S. & International can be altered (standard allocation is 60/40) to better address tax, risk, and liquidity profiles Overlay portfolio screens for ESG, SRI, “smart beta” factors, and other personal preferences are available (additional overlay fee) Run process to identify other independent managers (additional manager fee) Fixed Income We believe active management produces the best risk-adjusted returns in fixed income. Fixed income managers should have the flexibility to invest across different credit types, durations, and sectors. Quality managers can quickly move to capitalize on undervalued assets due to market dislocations or adjust for changes in interest rate forecasts. Our fixed income allocation is managed by a single institutional manager through a “Core-Plus” portfolio. The manager has outperformed their benchmark over 1, 3, 5, 10, and 25-year periods. Our relationship with this manager has led to favorable pricing. We access this strategy through a separately managed account (SMA) structure whereby clients own the individual fixed income securities directly, rather than through a mutual fund structure. There are two key advantages of an SMA: Owning the individual securities allows for tax-loss harvesting that creates “tax alpha”
+[H2] Fees are less than typical actively managed mutual funds
+[H2] Customizations
+[LI] Run process to identify other independent managers (additional manager fee)
+[H2] Liquid Alternatives
+[H2] Customizations
+[LI] Allocation to these strategies can be customized
+[LI] Any of these strategies may be removed from the portfolio
+[H2] Low-Liquidity Assets
+[H2] We define this set of strategies as “low-liquidity” assets rather than illiquid assets, as they each have varying degrees of liquidity, but are all less liquid than traditional investments.
+[H2] Two of the primary reasons for owning these alternative assets are:
+[P] Increased returns
+[H2] Lower volatility (risk), relative to traditional investments
+[H2] Given the demands of ownership, we believe:
+[LI] Target returns for alternative assets should be higher than long-term equity returns (10%+)
+[LI] Alternative assets should not only have a low correlation to traditional assets but also a low correlation to the other alternative assets in the portfolio
+[LI] The strategy should not be easily replicated in a cheaper or more liquid way
+[LI] The manager must have a history of both achieving expected returns and risk mitigation
+[LI] Each investment needs to be assessed not only on its own merits but additionally on how it fits within the overall portfolio
+[H2] Customizations
+[LI] These strategies can be customized
+[LI] Select from 200+ other alternative strategies with due diligence prepared ($2.5MM minimum investment)
+[LI] Have qualitative and operational due diligence performed on any strategy via a third-party ($25,000 additional fee)
+[H2] Other
+[H3] Ongoing Portfolio Changes
+[H2] Asset Allocation Changes
+[H2] Once a portfolio has been fully deployed, allocations between liquid assets and low-liquidity assets may change for two reasons:
+[P] A change in the client’s cash flow needs, objectives, etc.
+[H2] Drift due to return differences between liquid assets and low-liquidity assets
+[H2] Within the liquid assets,
+[H2] allocations between equities, fixed income, and liquid alternatives may change for three reasons:
+[LI]  A change in a client’s risk profile
+[LI]  Drift due to return differences between equities, fixed income, and liquid alternatives
+[LI]  Changes in tactical weightings that we make based on the current market and economic environment
+[H2] Within the low-liquidity assets,
+[H2] allocation among the core strategies may change for two reasons:
+[LI]  Drift due to return differences between the various strategies
+[LI]  Occasional weightings changes due to capital calls and the investments used to fund those capital calls
+[H2] Strategy Additions & Removals
+[H2] Trading
+[H2] In addition to the changes already noted, three types of trading will occur regularly across the portfolio:
+[LI] Manager-directed trades within SMAs
+[LI] Tax-loss harvesting across the liquid assets
+[LI] Trades surrounding client contributions or withdrawals
+[H3] Fee Structure
+[P] Clients have the option of either a tiered or performance-based fee schedule.
+[H2] It’s important to know that we are not compensated by external managers and we are not compensated differently based on the clients’ allocations:
+[H2] Must be a QC to use an incentive structure
+[H2] External fees
+[H2] Any expense or cost reductions that can be negotiated are passed directly to our clients
+[H3] Fee Structure
+[P] Clients have the option of either:
+[H1] or
+[H2] Additional fee notes:
+[LI] We are not compensated by external managers
+[LI] We are not compensated differently based on changes in allocations, strategies, or individual securities
+[LI] Any negotiated fee reductions pass directly to our clients
+[LI] To participate in the performance-based schedule one must be a Qualified Client (see Definitions below)
+[H3] Fee Structure
+[P] Clients have the option of either:
+[P] or
+[H2] Additional fee notes:
+[LI] We are not compensated by external managers
+[LI] We are not compensated differently based on changes in allocations, strategies, or individual securities
+[LI] Any negotiated fee reductions pass directly to our clients
+[LI] To participate in the performance-based schedule one must be a Qualified Client (see Definitions below)
+[H3] Definitions
+[H2] Accredited Investor
+[H2] Active management
+[H2] Correlation
+[H2] Direct indexing
+[H2] Lock-up
+[H2] Passive management
+[H2] Qualified Client
+[H2] Qualified Purchaser
+[H2] Separately Managed Account (SMA)
+[H2] Tax alpha
+[H2] Tax-loss harvesting
+[H2] Tracking error
+[H2] Unconstrained
+[H3] Read the Naviter Wealth Overview to learn more about how we can help guide your financial journey.
+[P] For additional information, please visit our website at https://naviterwealth.com/
+[P] Click Here for Naviter Wealth Disclaimers
+[H3] Email Verification Required
+[P] [gravityform id="4" title="false" description="false" ajax="true"]
+[H2] Naviter Wealth Policy Statement
+[H2] The Purpose of This Document
+[H3] Click below to jump to a section.
+[H2] Our Core Investment Tenets
+[H2] Portfolio Construction
+[H2] Ongoing Portfolio Changes
+[H2] Fee Structure
+[H2] Definitions
+[H3] Click below to jump to a section.
+[H2] Our Core Investment Tenants
+[H2] Portfolio Construction
+[H2] Ongoing Portfolio Changes
+[H2] Fee Structure
+[H2] Definitions 
+[H3] Our Core Investment Tenets
+[H3] Own what we recommend to our clients.
+[H3] Apply our best thoughts, strategies, and resources to all relationships.
+[H3] Diversify intelligently.
+[H3] Concentrate portfolios into our highest conviction strategies.
+[H3] Drive investment costs lower.
+[H3] Taxes matter.
+[H3] Our Core Investment Tenets
+[H2] Own what we recommend to our clients.
+[P] In line with our view that the families for whom we work are partners, we want our financial interests to be aligned; we are in it together. This belief is foundational to the remaining tenets.
+[H2] Apply our best thoughts, strategies, and resources to all relationships.
+[H2] Diversify intelligently.
+[P] The “diversity” that comes from owning the traditional style boxes (large-cap growth, large-cap value, mid-cap growth, etc.) is almost nonexistent due to their high correlation to one another. Simply owning more strategies should not be confused with diversifying away risk. One of the best ways to mitigate volatility is to own strategies that are truly lowly correlated to one another—which requires effort.
+[H2] Concentrate portfolios into our highest conviction strategies.
+[H2] Drive investment costs lower.
+[H2] Taxes matter.
+[P] We understand that it is not what you make that counts, but what you keep. While we are careful not to let the “tax tail wag the investment dog,” we aggressively seek to minimize the impact of taxes. We rarely use mutual funds which are typically tax-insensitive. We systematically tax-loss harvest across our portfolios—typically monthly, generating meaningful “tax alpha.”
+[H3] Portfolio Construction
+[H2] Liquid Assets vs. Low-Liquidity Assets
+[H2] When low-liquidity assets are properly selected—with low correlations to liquid assets—their inclusion can have two long-term positive effects on a diversified portfolio:
+[H2] An increase in return
+[H2] A decrease in volatility (risk)
+[H2] Decisions
+[LI]  Allocation between liquid and low-liquidity markets.
+[H2] Customizations
+[H2] Liquid Assets
+[H2] We view liquid assets in three categories:
+[P]  Equity Fixed income Liquid alternatives The common characteristic is that each of these has at least daily, if not intraday liquidity, i.e., the ability to be sold quickly for cash. The allocation between each varies based on a client’s risk tolerance, objectives, and other factors. We have created portfolio allocations for three preset risk profiles—conservative, moderate, and aggressive. Note that due to the expected returns and low correlation to equities and fixed income, the liquid alternatives are a static 40% regardless of the risk profile. Equity allocations increase and fixed income allocations decrease as risk tolerance increases. Risk Tilts Decisions Selection from pre-designed, liquid asset allocations for conservative, moderate, and aggressive proles. Customizations Clients are not limited to pre-designed allocations and may design their own blend of liquid markets, i.e., equities, fixed income, and liquid alternatives. Customizations Clients are not limited to pre-designed allocations and may design their own blend of liquid markets, i.e., equities, fixed income, and liquid alternatives. Equities We have three broad views on owning equities: Global equities are one asset class Passive management wins over active management (after trading costs/fees) True value exists in tax-loss harvesting Equities are often segmented into dozens of categories based on market cap, growth vs. value, geographic region, and many other factors. Investors commonly try to “diversify” into these various asset classes to lower risk, but due to the high level of correlation across these asset classes, this approach does little to mitigate volatility. Allocating to numerous asset classes that behave so similarly not only is ineffectual, but it serves to create a false sense of security for investors. Rather than idly attempting to invest across each of these “style boxes,” we view global equities as one asset class. Global equities (U.S., Developed, and Emerging Markets) have largely been commoditized. Large, highly-liquid, and well-known markets are very efficient (What does one manager know about Apple that every other manager doesn’t know?). This makes it highly unlikely that active management will consistently outperform passive management (the index/benchmark). Additionally, the fees of active managers further reduce the likelihood of outperforming the respective benchmark. In fact, according to the SPIVA® U.S. Year-End 2025 Scorecard, large-cap funds underperformed the S&P 500 for the 16th consecutive calendar year. Even more condemning, in the category of All Domestic which includes all market caps and styles, 94% underperformed their respective benchmarks over the last 20 years by an annual average of 2.31%. Given this data, it is improbable that we—or any other firm—bring value by selecting active managers in the broader markets. While active management may work in smaller, less-traded, niche pockets of the market, by utilizing passive management for broad global equities, we aim to significantly reduce fees and the tracking error to the benchmark (the difference between the portfolio performance and the benchmark performance). Rather than implement our passive approach to global equities through ETFs or mutual funds that track an index, we utilize Direct Indexing which provides a greater after-tax benefit. Direct Indexing seeks to replicate index performance by owning the index constituents (or a subset of them) directly—not through a fund structure. This approach allows for tax-loss harvesting across the entire portfolio, even in up markets. We systematically (typically monthly) tax-loss harvest across the entire portfolio. Studies show that historically this has annually generated 75-100 basis points of “tax alpha” or after-tax economic benefit. For more, see our piece on Direct Indexing. In summary, our global equity portfolio is passively managed through Direct Indexing. We view the benefits as: Reduced costs (no manager fees) Increased likelihood of matching index/benchmark returns and thereby outperforming the majority of equity managers Significant after-tax economic benefit via “tax alpha” Customizations Non-taxable accounts will not need to be tax-loss harvested Allocation between U.S. & International can be altered (standard allocation is 60/40) to better address tax, risk, and liquidity profiles Overlay portfolio screens for ESG, SRI, “smart beta” factors, and other personal preferences are available (additional overlay fee) Run process to identify other independent managers (additional manager fee) Fixed Income We believe active management produces the best risk-adjusted returns in fixed income. Fixed income managers should have the flexibility to invest across different credit types, durations, and sectors. Quality managers can quickly move to capitalize on undervalued assets due to market dislocations or adjust for changes in interest rate forecasts. Our fixed income allocation is managed by a single institutional manager through a “Core-Plus” portfolio. The manager has outperformed their benchmark over 1, 3, 5, 10, and 25-year periods. Our relationship with this manager has led to favorable pricing. We access this strategy through a separately managed account (SMA) structure whereby clients own the individual fixed income securities directly, rather than through a mutual fund structure. There are two key advantages of an SMA: Owning the individual securities allows for tax-loss harvesting that creates “tax alpha”
+[H2] Fees are less than typical actively managed mutual funds
+[H2] Customizations
+[LI]  Run process to identify other independent managers (additional manager fee)
+[H2] Liquid Alternatives
+[H2] Customizations
+[LI]  Allocation to these strategies can be customized
+[LI]  Any of these strategies may be removed from the portfolio
+[H2] Low-Liquidity Assets
+[H2] We define this set of strategies as “low-liquidity” assets rather than illiquid assets, as they each have varying degrees of liquidity, but are all less liquid than traditional investments.
+[H2] Two of the primary reasons for owning these alternative assets are:
+[P] Increased returns
+[H2] Lower volatility (risk), relative to traditional investments
+[H2] Given the demands of ownership, we believe:
+[LI]  Target returns for alternative assets should be higher than long-term equity returns (10%+)
+[LI]  Alternative assets should not only have a low correlation to traditional assets but also a low correlation to the other alternative assets in the portfolio
+[LI]  The strategy should not be easily replicated in a cheaper or more liquid way
+[LI]  The manager must have a history of both achieving expected returns and risk mitigation
+[LI]  Each investment needs to be assessed not only on its own merits but additionally on how it fits within the overall portfolio
+[H2] Customizations
+[LI]  These strategies can be customized
+[LI]  Select from 200+ other alternative strategies with due diligence prepared ($2.5MM minimum investment)
+[LI]  Have qualitative and operational due diligence performed on any strategy via a third-party ($25,000 additional fee)
+[H2] Other
+[H3] Ongoing Portfolio Changes
+[H2] Asset Allocation Changes
+[H2] Once a portfolio has been fully deployed, allocations between liquid assets and low-liquidity assets may change for two reasons:
+[P] A change in the client’s cash flow needs, objectives, etc.
+[H2] Drift due to return differences between liquid assets and low-liquidity assets
+[H2] Within the liquid assets,
+[H2] allocations between equities, fixed income, and liquid alternatives may change for three reasons:
+[LI]  A change in a client’s risk profile 
+[LI]  Drift due to return differences between equities, fixed income, and liquid alternatives
+[LI]  Changes in tactical weightings that we make based on the current market and economic environment
+[H2] Within the low-liquidity assets,
+[H2] allocation among the core strategies may change for two reasons:
+[LI]  Drift due to return differences between the various strategies
+[LI]  Occasional weightings changes due to capital calls and the investments used to fund those capital calls
+[H2] Strategy Additions & Removals
+[H2] Trading
+[H2] In addition to the changes already noted, three types of trading will occur regularly across the portfolio:
+[LI] Manager-directed trades within SMAs
+[LI] Tax-loss harvesting across the liquid assets
+[LI] Trades surrounding client contributions or withdrawals
+[H3] Fee Structure
+[P] Clients have the option of either a tiered or performance-based fee schedule.
+[H2] It’s important to know that we are not compensated by external managers and we are not compensated differently based on the clients’ allocations:
+[H2] Must be a QC to use an incentive structure
+[H2] External fees
+[H2] Any expense or cost reductions that can be negotiated are passed directly to our clients
+[H3] Fee Structure
+[P] Clients have the option of either:
+[H1] or
+[H2] Additional fee notes:
+[LI]  We are not compensated by external managers
+[LI]  We are not compensated differently based on changes in allocations, strategies, or individual securities
+[LI]  Any negotiated fee reductions pass directly to our clients
+[LI]  To participate in the performance-based schedule one must be a Qualified Client (see Definitions below)
+[H3] Fee Structure
+[P] Clients have the option of either:
+[P] or
+[H2] Additional fee notes:
+[LI]  We are not compensated by external managers
+[LI]  We are not compensated differently based on changes in allocations, strategies, or individual securities
+[LI]  Any negotiated fee reductions pass directly to our clients
+[LI]  To participate in the performance-based schedule one must be a Qualified Client (see Definitions below)
+[H3] Definitions
+[H2] Accredited Investor
+[H2] Active management
+[H2] Correlation
+[H2] Direct indexing
+[H2] Lock-up
+[H2] Passive management
+[H2] Qualified Client
+[H2] Qualified Purchaser
+[H2] Separately Managed Account (SMA)
+[H2] Tax alpha
+[H2] Tax-loss harvesting
+[H2] Tracking error
+[H2] Unconstrained
+[H3] Read the Naviter Wealth Overview to learn more about how we can help guide your financial journey.
+[P] For additional information, please visit our website at https://naviterwealth.com/
+[P] Click Here for Naviter Wealth Disclaimers
+[H3] Request a Conversation
+[LI] First Name*
+[LI] Last Name*
+[LI] Email* 
+[LI] Phone*
+[LI] How did you discover Naviter Wealth?*Search engine (Google, Yahoo, etc.)Recommended by a friend or colleagueSocial mediaPromotional adArticle, publication, or commentaryOther (please specify):
+[LI] Other (please specify):
+[LI] Message
+[LI] CAPTCHA
+[P] &#916;
+[P]  
+[LI] Subscribe to Our Latest Insights Name First Last Email CAPTCHA &#916; © Naviter Wealth. 
+[LI] All Rights Reserved.
+[LI] Disclosures.
+[LI] Form CRS.
+[P] Website Managed By: Strategic Websites

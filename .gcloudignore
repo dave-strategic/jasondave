@@ -1,0 +1,19 @@
+# This file instructs the gcloud tools to ignore certain files and directories
+# when uploading source code for deployment or build on Google Cloud.
+
+# Ignore common build artifacts, dependencies and system files
+node_modules/
+dist/
+build/
+coverage/
+.DS_Store
+*.log
+.env*
+!.env.example
+
+# Git directories
+.git/
+.gitignore
+
+# Google Cloud files
+.gcloudignore

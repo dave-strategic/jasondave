@@ -1,0 +1,188 @@
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Inter:wght@100..900&family=Montserrat:wght@100..900&family=Outfit:wght@100..900&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Outfit", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Montserrat", sans-serif;
+  --font-serif: "EB Garamond", serif;
+  
+  --color-naviter-navy: #154372;
+  --color-naviter-blue: #58aadb;
+  --color-naviter-mist: #dedff0;
+  
+  --color-naviter-secondary-1: #b9cae9;
+  --color-naviter-secondary-2: #90a8d7;
+  --color-naviter-secondary-3: #577dbe;
+  --color-naviter-secondary-4: #31579b;
+  
+  --color-naviter-accent-pink: #fbe7e7;
+  --color-naviter-accent-green: #e0ebdc;
+  
+  /* Mapping existing semantic names to the new palette */
+  --color-naviter-gold: #58aadb;
+  --color-background: #ffffff;
+  --color-surface: #ffffff;
+}
+
+@layer base {
+  body {
+    @apply bg-background text-naviter-navy antialiased;
+    font-family: var(--font-sans);
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-serif font-medium tracking-tight;
+  }
+}
+
+@media print {
+  @page {
+    size: letter landscape;
+    margin: 0;
+  }
+  
+  html, body {
+    width: 11in !important;
+    height: 8.5in !important;
+    overflow: visible !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    background-color: white !important;
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+
+  #root, main, .min-h-screen {
+    width: auto !important;
+    height: auto !important;
+    overflow: visible !important;
+    min-height: 0 !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    position: static !important;
+    background: transparent !important;
+  }
+
+  header, nav, .screen-only, .no-print, button, footer {
+    display: none !important;
+  }
+
+  .print-only-container {
+    display: block !important;
+    width: 11in !important;
+    background: white !important;
+  }
+
+  .print-slide-page {
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: space-between !important;
+    width: 11in !important;
+    height: 8.5in !important;
+    max-height: 8.5in !important;
+    box-sizing: border-box !important;
+    padding: 0.65in !important;
+    page-break-after: always !important;
+    break-after: page !important;
+    page-break-inside: avoid !important;
+    position: relative !important;
+    overflow: hidden !important;
+    background-color: white !important;
+    color: #111e30 !important;
+  }
+
+  .print-dark-bg {
+    background-color: #111e30 !important;
+    color: white !important;
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+  .print-dark-bg * {
+    color: white !important;
+  }
+
+  .print-slate-bg {
+    background-color: #fafafc !important;
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+
+  .print-gold-text {
+    color: #58aadb !important;
+  }
+}
+
+/* Screen print preview modes when previewing on screen in a regular viewport */
+.on-screen-preview-active {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  gap: 2.5rem !important;
+  background-color: #f1f5f9 !important; /* light slate background representing a design workshop workspace */
+}
+
+.on-screen-preview-active .print-slide-page {
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: space-between !important;
+  width: 1056px !important;     /* standard Letter landscape width */
+  height: 816px !important;    /* standard Letter landscape height */
+  max-height: 816px !important;
+  box-sizing: border-box !important;
+  padding: 60px !important;
+  position: relative !important;
+  overflow: hidden !important;
+  background-color: white !important;
+  color: #111e30 !important;
+  border-radius: 8px !important;
+  box-shadow: 0 10px 25px -5px rgba(17, 30, 48, 0.12), 0 8px 10px -6px rgba(17, 30, 48, 0.08) !important;
+  border: 1px solid rgba(21, 67, 114, 0.08) !important;
+  flex-shrink: 0 !important;
+}
+
+.on-screen-preview-active .print-dark-bg {
+  background-color: #111e30 !important;
+  color: white !important;
+}
+.on-screen-preview-active .print-dark-bg * {
+  color: white !important;
+}
+
+.on-screen-preview-active .print-slate-bg {
+  background-color: #fafafc !important;
+}
+
+.on-screen-preview-active .print-gold-text {
+  color: #58aadb !important;
+}
+
+/* Responsive scaling wrapper for screen preview booklet so it doesn't break overflow layouts */
+@media (max-width: 1120px) {
+  .on-screen-preview-active .print-slide-page {
+    transform: scale(0.85);
+    margin-top: -60px;
+    margin-bottom: -60px;
+  }
+}
+@media (max-width: 930px) {
+  .on-screen-preview-active .print-slide-page {
+    transform: scale(0.65);
+    margin-top: -140px;
+    margin-bottom: -140px;
+  }
+}
+@media (max-width: 720px) {
+  .on-screen-preview-active .print-slide-page {
+    transform: scale(0.48);
+    margin-top: -210px;
+    margin-bottom: -210px;
+  }
+}
+@media (max-width: 530px) {
+  .on-screen-preview-active .print-slide-page {
+    transform: scale(0.35);
+    margin-top: -260px;
+    margin-bottom: -260px;
+  }
+}
+
